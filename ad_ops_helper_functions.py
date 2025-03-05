@@ -39,7 +39,7 @@ def get_dataframes_from_csv_files(csv1, csv2):
   df2 = pd.read_csv(csv2)
 
   print(f'CSV1 has {df1.shape[0]} rows and {df1.shape[1]} columns.')
-  print(f'CSV1 has {df2.shape[0]} rows and {df2.shape[1]} columns.')
+  print(f'CSV2 has {df2.shape[0]} rows and {df2.shape[1]} columns.')
 
   return df1, df2
 
