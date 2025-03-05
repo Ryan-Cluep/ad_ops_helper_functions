@@ -23,18 +23,18 @@ def generate_new_csv(df, csv=str, name=None):
 
 def get_dataframes_from_csv_files(csv1, csv2):
   """
-    Reads two CSV files and returns their corresponding pandas DataFrames.
+  Reads two CSV files and returns their corresponding pandas DataFrames.
 
-    Args:
-        csv1 (str): Path to the first CSV file.
-        csv2 (str): Path to the second CSV file.
+  Args:
+      csv1 (str): Path to the first CSV file.
+      csv2 (str): Path to the second CSV file.
 
-    Returns:
-        tuple: A tuple containing two pandas DataFrames (df1, df2) corresponding to csv1 and csv2.
+  Returns:
+      tuple: A tuple containing two pandas DataFrames (df1, df2) corresponding to csv1 and csv2.
 
-    Prints:
-        - The number of rows and columns in each CSV file.
-    """
+  Prints:
+      - The number of rows and columns in each CSV file.
+  """
   df1 = pd.read_csv(csv1)
   df2 = pd.read_csv(csv2)
 
