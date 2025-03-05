@@ -177,9 +177,9 @@ def process_dataframes(df, column_names, new_column_names, columns_to_process):
       2. Cleans and converts budget-related columns to numeric format using `clean_and_convert_budgets`.
       3. Creates new budget-related columns using `create_new_budget_columns`.
   """
-  df = update_column_names(df, column_names=column_names, new_column_names=new_column_names)
-  df = clean_and_convert_budgets(df, columns_to_process=new_column_names)
-  df = create_new_budget_columns(df, columns_to_process=new_column_names)
+  df = update_column_names(df, column_names, new_column_names)
+  df = clean_and_convert_budgets(df, columns_to_process)
+  df = create_new_budget_columns(df, columns_to_process)
 
   return df
 
