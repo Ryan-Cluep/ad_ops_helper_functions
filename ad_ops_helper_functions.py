@@ -90,7 +90,7 @@ def map_creative_name_to_flights(df1, df2, column_to_merge_on):
   temp_df = temp_df[temp_columns].copy()
 
   temp_df = temp_df.rename(columns={
-    'Package Name_actual': 'Package Name',
+    'Ad Name_actual': 'Ad Name',
     'Ad ID_actual': 'Ad ID',
     'Ad Type_actual': 'Ad Type',
     'Ad Unit_actual': 'Ad Unit'
