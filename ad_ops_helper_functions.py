@@ -1,4 +1,6 @@
 ### Helper functions to automate ad operations tasks.
+import numpy as np
+import pandas as pd
 
 def generate_new_csv(df, csv=str, name=None):
   """
