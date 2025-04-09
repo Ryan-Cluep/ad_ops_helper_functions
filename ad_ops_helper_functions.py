@@ -283,19 +283,14 @@ def update_budgets(df1, df2, packages_to_process, start_dates):
   unique_start_dates = list(set(start_dates))
 
   for package in unique_packages:
-
     for start_date in unique_start_dates:
-
       num_flights = get_num_flights(df1, package, start_date)
       budget = get_budget(df2, package, start_date)
-      # flight_level_budget = budget / num_flights
 
-      with np.errstate(divide='ignore', invalid='ignore'):
-            flight_level_budget = budget / num_flights
-            # Optional: fallback to 0 if result is not finite
-            if not np.isfinite(flight_level_budget):
-                flight_level_budget = 0
-
+      if num_flights == 0:
+        continue
+      
+      flight_level_budget = budget / num_flights
       update_flight_level_budgets(df1, package, start_date, flight_level_budget)
 
   return df1
